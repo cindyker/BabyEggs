@@ -45,4 +45,18 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- Distribution -->
+	<distributionManagement>
+		<repository>
+			<id>cindyscats-repo</id>
+			<url>http://basket.cindyscats.com/content/repositories/releases/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>cindyscats-repo</id>
+			<url>http://basket.cindyscats.com/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
