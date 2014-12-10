@@ -1,15 +1,7 @@
-name: AutoAnnouncer
-main : com.minecraftdimensions.autoannouncer.AutoAnnouncer
-version: 1.0
+name: BabyEggs
+main : com.minecraftdimensions.babyeggs.BabyEggs
+version: 2.0
 description: Announcement plugin
 author: Bloodsplat
 website: http://www.spigotmc.org/resources/bungeesuite.9/
-prefix: AutoAnnouncer
-commands:
-    announcementreload:
-        description: Reload the announcements
-        aliases: [reloadannouncements,announcereload, reloadannounce]
-        permission: autoannouncer.reload
-        permission-message: §cYou do not have permission for this command
-        default: op
-        usage: /<command>
+prefix: BabyEggs
