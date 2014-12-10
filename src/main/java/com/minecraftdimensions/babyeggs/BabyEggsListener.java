@@ -1,16 +1,7 @@
 package com.minecraftdimensions.babyeggs;
 
 import org.bukkit.Material;
-import org.bukkit.entity.Chicken;
-import org.bukkit.entity.Cow;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Horse;
-import org.bukkit.entity.MushroomCow;
-import org.bukkit.entity.Ocelot;
-import org.bukkit.entity.Pig;
-import org.bukkit.entity.Sheep;
-import org.bukkit.entity.Villager;
-import org.bukkit.entity.Wolf;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -42,9 +33,11 @@ public class BabyEggsListener implements Listener {
 			}else if(type.equals(EntityType.WOLF)){
 				e.getLocation().getWorld().dropItemNaturally(e.getLocation(), new ItemStack(Material.MONSTER_EGG, 1, (short) 95));	
 			}else if(type.equals(EntityType.OCELOT)){
-				e.getLocation().getWorld().dropItemNaturally(e.getLocation(), new ItemStack(Material.MONSTER_EGG, 1, (short) 98));	
+				e.getLocation().getWorld().dropItemNaturally(e.getLocation(), new ItemStack(Material.MONSTER_EGG, 1, (short) 98));
 			}else if(type.equals(EntityType.VILLAGER)){
 				e.getLocation().getWorld().dropItemNaturally(e.getLocation(), new ItemStack(Material.MONSTER_EGG, 1, (short) 120));	
+			}else if (type.equals(EntityType.RABBIT)) {
+				e.getLocation().getWorld().dropItemNaturally(e.getLocation(), new ItemStack(Material.MONSTER_EGG, 1, (short)101));
 			}
 		}
 		if(e.getSpawnReason().equals(SpawnReason.SPAWNER_EGG)){
@@ -76,7 +69,11 @@ public class BabyEggsListener implements Listener {
 				}else if(type.equals(EntityType.VILLAGER)){
 					Villager villager = (Villager)e.getEntity();
 					villager.setBaby();	
+				}else if(type.equals(EntityType.RABBIT)){
+				Rabbit rabbit = (Rabbit)e.getEntity();
+				rabbit.setBaby();
 				}
+
 		}
 	}
 }
